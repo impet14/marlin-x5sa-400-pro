@@ -68,6 +68,11 @@
 
 // @section info
 
+//Ui Theme Changer
+//#define TFT_CLASSIC_UI    //Marlin Classic
+#define TFT_COLOR_UI      //Marlin Color Ui (Touch Support)
+// #define TFT_LVGL_UI       //Marlin MKS Themed UI (Good Touch Support but quite buggy with Chitu boards) 
+
 // Author info of this build printed to the host during boot and M115
 #define STRING_CONFIG_H_AUTHOR "HAYASHILAB X5SA PRO 400" // Who made the changes.
 //#define CUSTOM_VERSION_FILE Version.h // Path from the root directory (no quotes)
@@ -1518,7 +1523,13 @@
   // Commands to execute on filament runout.
   // With multiple runout sensors use the %c placeholder for the current tool in commands (e.g., "M600 T%c")
   // NOTE: After 'M412 H1' the host handles filament runout and this script does not apply.
+  // #define FILAMENT_RUNOUT_SCRIPT "M600"
+
+  #ifndef TFT_LVGL_UI
   #define FILAMENT_RUNOUT_SCRIPT "M600"
+  #else
+  #define FILAMENT_RUNOUT_SCRIPT "M25"
+  #endif
 
   // After a runout is detected, continue printing this length of filament
   // before executing the runout script. Useful for a sensor at the end of
@@ -1704,7 +1715,10 @@
  * Add a bed leveling sub-menu for ABL or MBL.
  * Include a guided procedure if manual probing is enabled.
  */
+// #define LCD_BED_LEVELING
+#ifndef TFT_LVGL_UI
 #define LCD_BED_LEVELING
+#endif
 
 #if ENABLED(LCD_BED_LEVELING)
   #define MESH_EDIT_Z_STEP  0.025 // (mm) Step size while manually probing Z axis.
@@ -2800,8 +2814,8 @@
  *   root of your SD card, together with the compiled firmware.
  */
 //#define TFT_CLASSIC_UI
-#define TFT_COLOR_UI
-// #define TFT_LVGL_UI
+//#define TFT_COLOR_UI
+//#define TFT_LVGL_UI
 
 #if ENABLED(TFT_LVGL_UI)
   //#define MKS_WIFI_MODULE  // MKS WiFi module
