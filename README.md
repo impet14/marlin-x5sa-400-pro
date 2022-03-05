@@ -1,6 +1,8 @@
 # Marlin 3D Printer Firmware for X5sa 400 Pro
-This is forked from marlin github.
-The device is Tronxy X5sa pro 400 with cxy v6 mainboard, tmc2225-sa
+This is forked from Marlin's GitHub.
+The device is Tronxy X5sa pro 400 with CXY v6 mainboard, tmc2225-SA
+The marlin\configuration.h is modified according to my device by modifying step/mm and prob pull-up.
+reference https://github.com/impet14/marlin-x5sa-400-pro/blob/main/Marlin/Configuration.h
 
 # Marlin 3D Printer Firmware
 
