@@ -16,6 +16,7 @@
                 "C:/Users/hayashi/.platformio/packages/framework-arduino-avr/cores/arduino",
                 "C:/Users/hayashi/.platformio/packages/framework-arduino-avr/variants/mega",
                 "C:/Users/hayashi/.platformio/packages/framework-arduino-avr/libraries/HID/src",
+                "C:/Users/hayashi/.platformio/packages/tool-unity",
                 ""
             ],
             "browse": {
@@ -29,6 +30,7 @@
                     "C:/Users/hayashi/.platformio/packages/framework-arduino-avr/cores/arduino",
                     "C:/Users/hayashi/.platformio/packages/framework-arduino-avr/variants/mega",
                     "C:/Users/hayashi/.platformio/packages/framework-arduino-avr/libraries/HID/src",
+                    "C:/Users/hayashi/.platformio/packages/tool-unity",
                     ""
                 ]
             },
